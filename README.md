@@ -34,6 +34,7 @@ The code is split across focused repositories so each stage stands alone:
 | [**esp-dl-quant-icra2026**](https://github.com/real-world-drl/esp-dl-quant-icra2026) | Quantization toolchain: trained TorchScript actor → ONNX → ESP-DL `.espdl` int8 model. CPU-only, end to end. Ships the trained QuaidSIM-v4 actors and calibration data. |
 | [**esp-dl-inference-icra2026**](https://github.com/real-world-drl/esp-dl-inference-icra2026) | ESP-IDF firmware that runs the quantized `.espdl` actor on an ESP32-S3. Receives observations over MQTT, runs ESP-DL inference on-device, publishes actions over MQTT. |
 | [**quaid-sim-cpp**](https://github.com/real-world-drl/quaid-sim-cpp) | Quadruped simulator that can drive the inference firmware over the documented MQTT protocol. |
+| [**sim-to-real-cpp**](https://github.com/real-world-drl/sim-to-real-cpp) | C++/LibTorch DRL training stack (TD3, SAC, with optional GRU encoders) using an asynchronous, non-blocking actor/learner architecture. The TorchScript `.dat` actor checkpoints consumed by the quantization toolchain are trained here. |
 
 *More repositories will be linked here as they are published.*
 
